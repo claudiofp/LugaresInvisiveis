@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+			
+            
+            <LinearLayout
+                android:id="@+id/containerControls"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"                
+                android:layout_centerVertical="true"                                          
+                >
+                
+                <ImageView
+                 android:id="@+id/staticBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"               
+                android:src="@drawable/barra_s1" 
+                />
+                
+                </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:layout_margin="7dp"
+                android:layout_centerVertical="true"
+                
+                >
+				
+                <Chronometer 
+                    android:id="@+id/chrono"
+				    android:layout_width="wrap_content"
+				    android:layout_height="fill_parent"				    				    
+				    android:text="00:00"				    
+				    android:textColor="#000000"
+				    android:layout_margin="10dp"
+				    android:visibility="invisible"
+				    
+				    />
+                
+                <ImageButton
+                    android:id="@+id/btnRecord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"                    
+                    android:background="@drawable/button_style_mic"
+                    android:src="@drawable/icon_gravar_s1"                                                            
+                    />
+
+                <ImageButton
+                    android:id="@+id/btnGPS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"                 
+                    android:background="@drawable/button_style_gps"
+                    android:src="@drawable/icon_gps_s1"
+                     />
+            </LinearLayout>
+           
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+
+        <!--  
+        	- release 
+        	android:apiKey="0KCleP6rO97MxM_w_OFMaGEWxNspwBgPSYQfNfQ" 
+        	- debug	
+        	android:apiKey="0KCleP6rO97Pltob6uVur-UwuxIPdB7K_yO7UZA"
+        -->
+        
+        <!-- Type do maps -->
+        
+        <com.google.android.maps.MapView
+            android:id="@+id/mapview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"            
+            android:apiKey="0KCleP6rO97MxM_w_OFMaGEWxNspwBgPSYQfNfQ"            
+            android:clickable="true"
+            android:drawingCacheQuality="high"
+            
+            
+            />
+    </LinearLayout>
+
+</LinearLayout>
